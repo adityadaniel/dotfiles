@@ -48,7 +48,6 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "junegunn/fzf"
   use "junegunn/fzf.vim"
-  
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -82,6 +81,9 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- ZK
+  use "renerocksai/telekasten.nvim"
 
   -- Git
   -- use "lewis6991/gitsigns.nvim"

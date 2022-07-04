@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["telekasten.nvim"] = {
+    loaded = true,
+    path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/telekasten.nvim",
+    url = "https://github.com/renerocksai/telekasten.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/telescope.nvim",
