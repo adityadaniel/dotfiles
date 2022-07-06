@@ -1,10 +1,10 @@
 local options = {
     clipboard = "unnamedplus",
+    guicursor = "",
     termguicolors = true,
     swapfile = false,
     fileencoding = "utf-8",
 	scrolloff = 8,
-	hlsearch = true,
 	tabstop = 4,
 	softtabstop = 4,
 	shiftwidth = 4,
@@ -26,8 +26,10 @@ local options = {
     wrap = false,
 }
 
+
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
 vim.opt.shortmess:append "c"
+vim.opt.completeopt={"menu", "menuone", "noselect"}
