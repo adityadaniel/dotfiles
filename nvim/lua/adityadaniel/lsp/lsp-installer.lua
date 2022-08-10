@@ -18,6 +18,7 @@ local servers = {
   "tailwindcss",
   "zk",
   "graphql",
+  "solargraph",
 }
 
 local settings = {

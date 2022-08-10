@@ -74,6 +74,11 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+  -- TMUXLine
+  use "edkolev/tmuxline.vim"
+  use "vim-airline/vim-airline"
+  use "vim-airline/vim-airline-themes"
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
@@ -83,9 +88,6 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-
-  -- ZK
-  use "renerocksai/telekasten.nvim"
 
   -- Git
   -- use "lewis6991/gitsigns.nvim"
