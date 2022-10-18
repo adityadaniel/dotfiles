@@ -1,13 +1,13 @@
 # Move to another worktree
 function gwm() {
     cd ~/Developer/ios-tokopedia
-    cd $(git worktree list | fzy | cut -d ' ' -f1)
+    cd $(git worktree list | fzf | cut -d ' ' -f1)
 }
 
 # Remove git worktree
 function gwrm() {
     cd ~/Developer/ios-tokopedia
-    gw remove $(git worktree list | fzy | cut -d ' ' -f1 | rev | cut -d '/' -f1 | rev)
+    gw remove $(git worktree list | fzf | cut -d ' ' -f1 | rev | cut -d '/' -f1 | rev)
 }
 
 # add new worktree, must be run inside a git repository
