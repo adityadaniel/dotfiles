@@ -7,12 +7,11 @@ if not status_cmp_ok then
   return
 end
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
-M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
+M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
   local icons = require "adityadaniel.icons"
   local signs = {
-
     { name = "DiagnosticSignError", text = icons.diagnostics.Error },
     { name = "DiagnosticSignWarn", text = icons.diagnostics.Warning },
     { name = "DiagnosticSignHint", text = icons.diagnostics.Hint },
@@ -81,7 +80,7 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<M-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "dp", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "dn", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
@@ -132,6 +131,6 @@ function M.remove_augroup(name)
   end
 end
 
-vim.cmd [[ command! LspToggleAutoFormat execute 'lua require("user.lsp.handlers").toggle_format_on_save()' ]]
+vim.cmd [[ command! LspToggleAutoFormat execute 'lua require("adityadaniel.lsp.lsp-handlers").toggle_format_on_save()' ]]
 
 return M

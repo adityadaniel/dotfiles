@@ -22,3 +22,7 @@ function gwan() {
 function deeplink() {
     xcrun simctl openurl booted "$1"
 }
+
+function bb() {
+    bazelisk build "$1" --config=coding --cpu=ios_arm64
+}

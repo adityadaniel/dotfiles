@@ -4,21 +4,18 @@ if not status_ok then
 end
 
 local servers = {
-  "dartls",
   "cssls",
   "html",
   "jsonls",
   "sumneko_lua",
-  "tsserver",
   "pyright",
   "sourcekit",
   "yamlls",
   "bashls",
   "gopls",
-  "tailwindcss",
-  "zk",
   "graphql",
   "solargraph",
+  "rust_analyzer",
 }
 
 local settings = {
@@ -77,6 +74,11 @@ for _, server in pairs(servers) do
   if server == "gopls" then
       local gopls_opts = require "adityadaniel.lsp.settings.gopls"
       opts = vim.tbl_deep_extend("force", gopls_opts, opts)
+  end
+
+  if server == "rust" then
+    local rust_opts = require "adityadaniel.lsp.settings.rust"
+    opts = vim.tbl_deep_extend("force", rust_opts, opts)
   end
 
   lspconfig[server].setup(opts)

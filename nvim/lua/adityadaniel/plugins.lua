@@ -48,16 +48,13 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "junegunn/fzf"
   use "junegunn/fzf.vim"
-  use "rebelot/kanagawa.nvim"
-  use "savq/melange"
   use "ghifarit53/tokyonight-vim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   -- use "lunarvim/darkplus.nvim"
   use "sainnhe/gruvbox-material"
-     
-  -- cmp plugins
+
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
@@ -92,6 +89,9 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+
+  -- Rust
+  use "simrat39/rust-tools.nvim"
   -- Git
   -- use "lewis6991/gitsigns.nvim"
 

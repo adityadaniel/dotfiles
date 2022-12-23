@@ -139,16 +139,6 @@ _G.packer_plugins = {
     path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
-  melange = {
-    loaded = true,
-    path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/melange",
-    url = "https://github.com/savq/melange"
-  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
@@ -203,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/daniel.istyana/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
